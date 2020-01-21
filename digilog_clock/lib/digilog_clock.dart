@@ -184,14 +184,14 @@ class _DigiLogClockState extends State<DigiLogClock> {
                       children: [
                         TextSpan(
                             text: ":$min",
-                            style: TextStyle(color: customTheme.primaryColor)),
+                            style: TextStyle(color:customTheme.highlightColor )),
                         TextSpan(
                             text: ":$sec",
                             style: TextStyle(color: customTheme.accentColor)),
                       ],
                       style: TextStyle(
                           fontSize: 25,
-                          color: customTheme.highlightColor,
+                          color: customTheme.primaryColor,
                           fontWeight: FontWeight.bold)),
                 ),
               ),
