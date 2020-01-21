@@ -1,5 +1,6 @@
 import 'dart:async';
 
+import 'package:flutter/services.dart';
 import 'package:flutter_clock_helper/model.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/semantics.dart';
@@ -39,6 +40,10 @@ class _DigiLogClockState extends State<DigiLogClock> {
   @override
   void initState() {
     super.initState();
+    //setting preferred orientation to Landscape
+    SystemChrome.setPreferredOrientations([DeviceOrientation.landscapeLeft,DeviceOrientation.landscapeRight]);
+    // removing UI Overlays
+    SystemChrome.setEnabledSystemUIOverlays([]);
     widget.model.addListener(_updateModel);
     // Set the initial values.
     _updateTime();
