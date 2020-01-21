@@ -11,7 +11,6 @@ import 'package:flutter/material.dart';
 
 import 'digilog_clock.dart';
 
-
 void main() {
   // A temporary measure until Platform supports web and TargetPlatform supports
   // macOS.

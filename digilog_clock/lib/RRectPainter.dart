@@ -10,7 +10,10 @@ class RRectPainter extends CustomPainter {
   double radius;
   double cornerRadius;
 
-  RRectPainter({@required this.baseColor, @required this.strokeWidth,@required this.cornerRadius});
+  RRectPainter(
+      {@required this.baseColor,
+      @required this.strokeWidth,
+      @required this.cornerRadius});
 
   @override
   void paint(Canvas canvas, Size size) {
@@ -23,7 +26,6 @@ class RRectPainter extends CustomPainter {
 
     center = Offset(size.width / 2, size.height / 2);
     radius = min(size.width / 2, size.height / 2);
-
 
     canvas.drawRRect(
         RRect.fromRectAndCorners(

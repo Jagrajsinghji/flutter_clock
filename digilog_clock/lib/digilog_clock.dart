@@ -41,7 +41,8 @@ class _DigiLogClockState extends State<DigiLogClock> {
   void initState() {
     super.initState();
     //setting preferred orientation to Landscape
-    SystemChrome.setPreferredOrientations([DeviceOrientation.landscapeLeft,DeviceOrientation.landscapeRight]);
+    SystemChrome.setPreferredOrientations(
+        [DeviceOrientation.landscapeLeft, DeviceOrientation.landscapeRight]);
     // removing UI Overlays
     SystemChrome.setEnabledSystemUIOverlays([]);
     widget.model.addListener(_updateModel);

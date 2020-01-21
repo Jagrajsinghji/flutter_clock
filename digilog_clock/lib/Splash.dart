@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 
-
-
 class Splash extends StatefulWidget {
   final Color color;
   final double size;
@@ -12,17 +10,15 @@ class Splash extends StatefulWidget {
   _SplashState createState() => _SplashState();
 }
 
-class _SplashState extends State<Splash>
-    with SingleTickerProviderStateMixin {
+class _SplashState extends State<Splash> with SingleTickerProviderStateMixin {
   AnimationController _controller;
   Animation<double> size;
   Animation<Color> splashColor;
 
-
   @override
   void initState() {
-    _controller = AnimationController(
-        vsync: this, duration: Duration( milliseconds: 950));
+    _controller =
+        AnimationController(vsync: this, duration: Duration(milliseconds: 950));
     super.initState();
 
     size = Tween(begin: 10.0, end: widget.size).animate(_controller);
@@ -32,7 +28,7 @@ class _SplashState extends State<Splash>
         .animate(
             CurvedAnimation(parent: _controller, curve: Curves.easeInSine));
     _controller.addListener(() => setState(() {}));
-      _controller.repeat();
+    _controller.repeat();
   }
 
   @override
@@ -47,12 +43,9 @@ class _SplashState extends State<Splash>
       child: Container(
         height: size.value,
         width: size.value,
-        decoration: BoxDecoration(
-            shape: BoxShape.circle,
-            color: splashColor.value),
+        decoration:
+            BoxDecoration(shape: BoxShape.circle, color: splashColor.value),
       ),
     );
   }
-
-
 }
